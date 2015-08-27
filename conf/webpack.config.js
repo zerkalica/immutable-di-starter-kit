@@ -8,6 +8,7 @@ var webpack = require('webpack')
 const DEBUG = 'app:*'
 
 module.exports = {
+    cwd: path.resolve(__dirname, '..'),
     cache: true,
     debug: true,
     devtool: 'source-map',
@@ -26,7 +27,7 @@ module.exports = {
                 test: /\.(?:jsx?|es6)$/,
                 include: /(?:src)|(?:lib)/,
                 exclude: /(?:node_modules|bower_components)/,
-                loaders: ['react-hot-loader', 'babel-loader']
+                loaders: ['babel-loader'] // 'react-hot-loader'
             },
             {
                 test: /\.(?:png|jpg|gif|ico)$/,
