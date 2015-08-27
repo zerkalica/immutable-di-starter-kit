@@ -34,7 +34,7 @@
   "files": [
     "*.map",
     "*.js",
-    "build"
+    "build",
     "README.md",
     "LICENSE"
   ],
