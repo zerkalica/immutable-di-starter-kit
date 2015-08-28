@@ -6,8 +6,6 @@ import Layout from 'app/components/Layout'
 
 describe('Layout', () => {
     it('should rendered', () => {
-        const renderer = createRenderer()
-        renderer.render(<Layout/>)
-        expect(renderer, 'to have rendered', <div className="app"/>)
+        expect(createRenderer(<Layout/>), 'to have rendered', <div className="app"/>)
     })
 })
