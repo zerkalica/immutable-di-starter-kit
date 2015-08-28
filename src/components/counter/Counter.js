@@ -9,7 +9,7 @@ const {func, number} = PropTypes
     counter: ['counter', 'value'],
     addCounter: AddCounter
 })
-export default class App extends React.Component {
+export default class Counter extends React.Component {
     static propTypes = {
         counter: number.isRequired,
         addCounter: func.isRequred
