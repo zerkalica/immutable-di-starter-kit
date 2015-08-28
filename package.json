@@ -64,7 +64,6 @@
     "minimist": "^1.2.0",
     "mocha": "^2.2.5",
     "npm-check-updates": "^2.2.0",
-    "object-assign": "^4.0.1",
     "power-assert": "^1.0.0",
     "proxyquire": "^1.7.1",
     "react-hot-loader": "^1.2.9",
