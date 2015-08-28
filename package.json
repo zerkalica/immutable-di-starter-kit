@@ -23,7 +23,7 @@
     "test": "mocha",
     "test.dev": "npm run test -- --growl --watch",
     "test.cov": "babel-istanbul cover --report text --report html node_modules/mocha/bin/_mocha",
-    "start": "webpack-dev-server --config conf/webpack.config.js --hot --inline"
+    "start": "webpack-dev-server --config conf/webpack.config.es5.js --hot --inline"
   },
   "author": "Stefan Zerkalica <zerkalica@gmail.com>",
   "license": "MIT",

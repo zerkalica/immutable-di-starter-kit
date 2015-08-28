@@ -1,14 +1,10 @@
-/* eslint-env node */
-/* eslint-disable no-var, no-process-env */
-
-var path = require('path')
-var HtmlWebpackPlugin = require('html-webpack-plugin')
-var exampleDir = path.resolve(__dirname, '..', 'src')
-var webpack = require('webpack')
+import path from 'path'
+import HtmlWebpackPlugin from 'html-webpack-plugin'
+import webpack from 'webpack'
 
 const DEBUG = 'app:*'
 
-module.exports = {
+export default {
     cwd: path.resolve(__dirname, '..'),
     cache: true,
     debug: true,
@@ -17,7 +13,7 @@ module.exports = {
         path: path.resolve(__dirname, '..', 'build'),
         filename: 'app.js'
     },
-    entry: path.join(exampleDir, 'index.js'),
+    entry: path.resolve(__dirname, '..', 'src', 'index.js'),
     module: {
         preLoaders: [{
             test: /\.styl$/,
