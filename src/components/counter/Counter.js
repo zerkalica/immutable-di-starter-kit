@@ -12,7 +12,7 @@ const {func, number} = PropTypes
 export default class Counter extends React.Component {
     static propTypes = {
         counter: number.isRequired,
-        addCounter: func.isRequred
+        addCounter: func
     }
 
     render() {
