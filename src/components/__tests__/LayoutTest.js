@@ -2,12 +2,12 @@
 import React from 'react'
 
 import {expect, createRenderer} from 'app/testHelpers'
-import App from 'app/components/App'
+import Layout from 'app/components/Layout'
 
-describe('App', () => {
+describe('Layout', () => {
     it('should rendered', () => {
         const renderer = createRenderer()
-        renderer.render(<App/>)
-        expect(renderer, 'to contain', <div className="app"/>)
+        renderer.render(<Layout/>)
+        expect(renderer, 'to have rendered', <div className="app"/>)
     })
 })

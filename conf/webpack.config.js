@@ -1,8 +1,9 @@
-/*eslint-env node */
+/* eslint-env node */
 /* eslint-disable no-var, no-process-env */
-var path = require('path');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
-var exampleDir = path.resolve(__dirname, '..', 'src');
+
+var path = require('path')
+var HtmlWebpackPlugin = require('html-webpack-plugin')
+var exampleDir = path.resolve(__dirname, '..', 'src')
 var webpack = require('webpack')
 
 const DEBUG = 'app:*'
@@ -18,6 +19,10 @@ module.exports = {
     },
     entry: path.join(exampleDir, 'index.js'),
     module: {
+        preLoaders: [{
+            test: /\.styl$/,
+            loader: 'import-glob-loader'
+        }],
         loaders: [
             {
                 test: /\.json$/,
@@ -38,20 +43,15 @@ module.exports = {
                 loader: 'file?name=assets/[name].[ext]'
             },
             {
-                loader: 'style-loader?singleton!css-loader!autoprefixer-loader?browsers=last 2 version!stylus',
-                test: new RegExp('\\.(styl)$')
+                loader: 'style-loader?singleton!css-loader!autoprefixer-loader?browsers=last 2 version!stylus!import-glob-loader',
+                test: /\.styl$/
             }
         ]
-    },
-    resolve: {
-        alias: {
-            'app': path.resolve(__dirname, '..', 'src')
-        }
     },
     plugins: [
         new webpack.DefinePlugin({
             'process.env': {
-                IS_BROWSER: true,
+                IS_BROWSER: JSON.stringify(true),
                 DEBUG: JSON.stringify(DEBUG)
             }
         }),

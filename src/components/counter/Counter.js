@@ -1,5 +1,3 @@
-import 'app/components/counter/Counter.styl'
-
 import React, {PropTypes} from 'react'
 import statefull from 'immutable-di/react/statefull'
 

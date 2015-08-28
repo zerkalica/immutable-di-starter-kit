@@ -1,9 +1,5 @@
+import 'app/All.styl'
 import __debug from 'debug'
-
-if (process.env.IS_BROWSER && process.env.DEBUG) {
-    __debug.enable(process.env.DEBUG)
-}
-
 import React from 'react'
 import Container from 'immutable-di'
 import NativeCursor from 'immutable-di/cursors/native'
@@ -11,6 +7,10 @@ import NativeCursor from 'immutable-di/cursors/native'
 import InitCounter from 'app/actions/counter/InitCounter'
 import App from 'app/components/App'
 import state from 'app/state.json'
+
+if (process.env.IS_BROWSER && process.env.DEBUG) {
+    __debug.enable(process.env.DEBUG)
+}
 
 const debug = __debug('app:debug:index')
 

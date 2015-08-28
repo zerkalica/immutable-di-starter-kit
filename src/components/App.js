@@ -1,15 +1,16 @@
-import 'app/components/App.styl'
 import React from 'react'
 import root from 'immutable-di/react/root'
 import Counter from 'app/components/counter/Counter'
+import Layout from 'app/components/Layout'
 
 @root
 export default class App extends React.Component {
     render() {
         return (
-            <div className="app">
+            <Layout>
+                <h1>Counter app</h1>
                 <Counter />
-            </div>
+            </Layout>
         )
     }
 }
