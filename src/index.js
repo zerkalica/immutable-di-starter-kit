@@ -8,8 +8,8 @@ import InitCounter from 'app/actions/counter/InitCounter'
 import App from 'app/components/App'
 import state from 'app/state.json'
 
-if (process.env.IS_BROWSER && process.env.DEBUG) {
-    __debug.enable(process.env.DEBUG)
+if (global.BROWSER && global.DEBUG) {
+    __debug.enable(global.DEBUG)
 }
 
 const debug = __debug('app:debug:index')

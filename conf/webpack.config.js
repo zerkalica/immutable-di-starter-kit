@@ -45,12 +45,14 @@ export default {
         ]
     },
     plugins: [
+/*
         new webpack.DefinePlugin({
             'process.env': {
                 IS_BROWSER: JSON.stringify(true),
                 DEBUG: JSON.stringify(DEBUG)
             }
         }),
+*/
         new HtmlWebpackPlugin()
     ]
 }
