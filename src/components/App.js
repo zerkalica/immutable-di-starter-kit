@@ -3,7 +3,7 @@ import root from 'immutable-di/react/root'
 import Counter from 'app/components/counter/Counter'
 import Layout from 'app/components/Layout'
 
-@root
+@root()
 export default class App extends React.Component {
     render() {
         return (
